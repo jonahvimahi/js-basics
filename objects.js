@@ -15,8 +15,18 @@
 */
 
 //CODE HERE
-
-
+class me{
+  constructor(firstName, state, age,){
+    this.firstName = firstName
+    this.state = state
+    this.age = age
+  }
+  greeting(){
+    console.log(`Hello! My name is ${this.firstName} and I live in ${this.state}`)
+  }
+}
+let jonah = new me('Jonah', 'Utah', 21)
+jonah.greeting()
   // `Hello! My name is ${firstName} and I live in ${utah}`,
 // }
 
@@ -48,13 +58,19 @@
 */
 
 //CODE HERE
-function carFactory(make, model, year){
-  let car = {
-    make: 'Volkswagen',
-    model: 'CC',
-    year: 2012,
+function carFactory(make, model, year,){
+    class Car{
+      constructor(make, model, year,){
+        this.make = make;
+        this.model = model;
+        this.year = year;
+      }
+  }if(this.year > 2018){
+    Car.isNew = true
+  }else {
+    Car.isnew = false
   }
-  if(car.year >= 2018){
-    carFactory.isNew = true
-  }
+  let jonahsCar = new Car(`volkswagen`, `cc`, 2012)
+  console.log(jonahsCar)
 }
+carFactory()
