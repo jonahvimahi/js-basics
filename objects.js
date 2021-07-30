@@ -33,15 +33,17 @@ jonah.greeting()
 
 //////////////////PROBLEM 2////////////////////
 /*
-  Write a function called carFactory that takes in three parameters: a make, model, 
-  and year.  
+  Write a function called carFactory that takes in three parameters: 
+  a make, model, and year.  
   When the function is invoked:
     - a string will be sent in for make
     - a string will be sent in for model
     - a number will be sent in for year
   Inside the function, create an object from those parameters.
-  Next, write an if statement that will check if the year sent in is greater than 2018.
-    - if the year is greater than 2018, add a key to the object called isNew and set it 
+  Next, write an if statement that will check if the year sent in 
+  is greater than 2018.
+    - if the year is greater than 2018, add a key to the object 
+    called isNew and set it 
     to true
     - else, add a key to the object called isNew and set it to false
       - hint: you can use dot notation or bracket notation
@@ -58,19 +60,16 @@ jonah.greeting()
 */
 
 //CODE HERE
-function carFactory(make, model, year,){
-    class Car{
-      constructor(make, model, year,){
-        this.make = make;
-        this.model = model;
-        this.year = year;
-      }
-  }if(this.year > 2018){
-    Car.isNew = true
-  }else {
-    Car.isnew = false
+function carFactory(make, model, year){
+  let jonahsCar = {
+    make: 'volkswagen',
+    model: 'cc',
+    year: 2012,
   }
-  let jonahsCar = new Car(`volkswagen`, `cc`, 2012)
-  console.log(jonahsCar)
 }
-carFactory()
+if(year > 2018){
+  jonahsCar.isNew = true
+}else {
+  jonahsCar.isNew = false
+}
+carFactory
