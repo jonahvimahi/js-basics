@@ -15,18 +15,15 @@
 */
 
 //CODE HERE
-class me{
-  constructor(firstName, state, age,){
-    this.firstName = firstName;
-    this.state = state;
-    this.age = age;
+const me = {
+  firstName: 'Jonah',
+  state: 'Utah',
+  age: 21,
+  greeter: function(){
+    return `Hello! My name is ${me.firstName} and I live in ${me.state}`
   }
-  greeting(){
-    console.log(`Hello! My name is ${this.firstName} and I live in ${this.state}`)
-  }
-}
-let jonah = new me('Jonah', 'Utah', 21)
-jonah.greeting()
+};
+console.log(me.greeter())
   // `Hello! My name is ${firstName} and I live in ${utah}`,
 // }
 
