@@ -5,7 +5,7 @@ const reader = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
-
+console.log(`Welcome to The Password Validator`)
 reader.question("What would you like to use as your password?", function(answer) {
     if(answer.length > 10){
       console.log(answer + ` is a valid password`)
