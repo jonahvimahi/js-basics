@@ -60,17 +60,19 @@ jonah.greeting()
 */
 
 //CODE HERE
-class carFactory{
-  constructor(make, model, year){
-    this.make = make;
-    this.model = model;
-    this.year = year;
-    if(this.year > 2018){
-      carFactory.isNew = true
-    } else(
-      carFactory.isNew = false
-    )
+function carFactory(make, model, year,){
+  let jonahsCar = {
+    make: make,
+    model: model,
+    year: year
   }
+  if(year > 2018){
+    jonahsCar.isNew = true
+  } else{
+    jonahsCar.isNew = false
+
+  }
+  return jonahsCar
 }
-let jonahsCar = new carFactory('volkswagen', 'cc', 2012)
-console.log(jonahsCar)
+let newCar = carFactory('volkwagen', 'cc', 2012)
+console.log(newCar)
