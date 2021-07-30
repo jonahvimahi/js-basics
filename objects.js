@@ -17,9 +17,9 @@
 //CODE HERE
 class me{
   constructor(firstName, state, age,){
-    this.firstName = firstName
-    this.state = state
-    this.age = age
+    this.firstName = firstName;
+    this.state = state;
+    this.age = age;
   }
   greeting(){
     console.log(`Hello! My name is ${this.firstName} and I live in ${this.state}`)
@@ -60,16 +60,17 @@ jonah.greeting()
 */
 
 //CODE HERE
-function carFactory(make, model, year){
-  let jonahsCar = {
-    make: 'volkswagen',
-    model: 'cc',
-    year: 2012,
+class carFactory{
+  constructor(make, model, year){
+    this.make = make;
+    this.model = model;
+    this.year = year;
+    if(this.year > 2018){
+      carFactory.isNew = true
+    } else(
+      carFactory.isNew = false
+    )
   }
 }
-if(year > 2018){
-  jonahsCar.isNew = true
-}else {
-  jonahsCar.isNew = false
-}
-carFactory
+let jonahsCar = new carFactory('volkswagen', 'cc', 2012)
+console.log(jonahsCar)
