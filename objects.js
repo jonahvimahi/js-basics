@@ -57,19 +57,17 @@ console.log(me.greeter())
 */
 
 //CODE HERE
-function carFactory(make, model, year,){
-  let jonahsCar = {
+function carFactory(make, model, year){
+  let car = {
     make: make,
     model: model,
-    year: year
+    year: year,
   }
   if(year > 2018){
-    jonahsCar.isNew = true
+    car.isNew = true
   } else{
-    jonahsCar.isNew = false
-
+    car.isnew = false
   }
-  return jonahsCar
+  return car
 }
-let newCar = carFactory('volkwagen', 'cc', 2012)
-console.log(newCar)
+console.log(carFactory('volkswagen', 'cc', 2012))
